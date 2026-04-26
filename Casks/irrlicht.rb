@@ -26,12 +26,12 @@ cask "irrlicht" do
                    sudo: false
   end
 
-  uninstall quit:       "io.irrlicht.app",
-            launchctl:  "io.irrlicht.app.daemon"
+  uninstall launchctl: "io.irrlicht.app.daemon",
+            quit:      "io.irrlicht.app"
 
   zap trash: [
     "~/Library/Application Support/Irrlicht",
-    "~/Library/Preferences/io.irrlicht.app.plist",
     "~/Library/LaunchAgents/io.irrlicht.app.daemon.plist",
+    "~/Library/Preferences/io.irrlicht.app.plist",
   ]
 end
